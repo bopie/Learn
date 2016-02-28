@@ -62,3 +62,24 @@ var factorial = memoize(function (n) {
 });
 factorial(5) // => 120. Also caches values for 4, 3, 2 and 1.
 ```
+
+``` javascrit
+function Range(from, to) {
+    this.from = from;
+    this.to = to;
+}
+
+Range.prototype = {
+    includes: function (x) {
+        return this.from <= x && x <= this.to;
+    },
+
+    foreach: function (f) {
+        for (var x = Math.ceil(this.from); x <= this.to; x++) f(x);
+    },
+
+    toString: function () {
+        return "(" + this.from + "..." + this.to + ")";
+    }
+};
+```
