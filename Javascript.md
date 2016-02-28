@@ -29,7 +29,7 @@
 * constructor invocation
 * indirect invocation
 
-`If a nested function is invoked as a function then its this value will be either the global object (non-strict mode) or undefined (strict mode). `
+> If a nested function is invoked as a function then its this value will be either the global object (non-strict mode) or undefined (strict mode). 
 
 But if a constructor has no parameters, then JavaScript constructor invocation syntax allows the argument list and parentheses to be omitted entirely.
 
