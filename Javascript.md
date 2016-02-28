@@ -63,7 +63,7 @@ var factorial = memoize(function (n) {
 factorial(5) // => 120. Also caches values for 4, 3, 2 and 1.
 ```
 
-``` javascrit
+``` javascript
 function Range(from, to) {
     this.from = from;
     this.to = to;
