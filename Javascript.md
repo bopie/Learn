@@ -83,3 +83,14 @@ Range.prototype = {
     }
 };
 ```
+
+
+###### Constructor object
+As we’ve noted, the constructor function (an object) defines a name for a JavaScript class. Properties you add to this constructor object serve as class fields and class methods (depending on whether the property values are functions or not).
+###### Prototype object
+The properties of this object are inherited by all instances of the class, and prop- erties whose values are functions behave like instance methods of the class.
+###### Instance object
+Each instance of a class is an object in its own right, and properties defined directly on an instance are not shared by any other instances. Nonfunction properties de- fined on instances behave as the instance fields of the class.
+
+
+
