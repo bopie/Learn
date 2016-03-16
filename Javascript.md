@@ -92,5 +92,35 @@ The properties of this object are inherited by all instances of the class, and p
 ###### Instance object
 Each instance of a class is an object in its own right, and properties defined directly on an instance are not shared by any other instances. Nonfunction properties de- fined on instances behave as the instance fields of the class.
 
+``` html
+<img data-rollout="http://vignette4.wikia.nocookie.net/disney/images/e/ef/Nick_Wilde_Zootopia.png/revision/latest?cb=20151224194739" data-rollover="http://wondersofdisney3.yolasite.com/resources/zootopia/nick/nickwilde.png" alt="no image" width="100">
+<svg width="100" height="100">
+  <rect x=0 y=0 width=100 height=100 fill="#eedf1b"></rect>
+  <circle cx=50 cy=50 r=50 fill="#00dd55"></circle>
+</svg>
+<br/>
+<canvas id="canvas" width=300 height=300></canvas>
+```
+
+``` javascript
+var c = $('#canvas')[0].getContext('2d');
+c.beginPath();
+c.moveTo(100, 100);
+c.lineTo(200, 200);
+c.lineTo(100, 200);
+c.moveTo(300, 100);
+c.lineTo(300, 200);
+c.stroke();
 
 
+$.each($('img'), function(i, img) {
+	img.src = $(img).data('rollout');
+  
+	$(img).mouseover(function() {
+  	this.src = $(this).data('rollover');
+  });
+  $(img).mouseout(function() {
+  	this.src = $(this).data('rollout');
+  })
+});
+```
